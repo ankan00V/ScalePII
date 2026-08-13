@@ -1,137 +1,237 @@
 import { useState } from 'react';
 import {
+  ArrowDownToLine,
   ArrowUpRight,
-  CheckCircle2,
-  FileCheck2,
+  Check,
+  ChevronDown,
+  FileText,
+  Fingerprint,
   Github,
   LockKeyhole,
+  ScanLine,
   ShieldCheck,
   TerminalSquare,
 } from 'lucide-react';
 
-type ProjectSummary = {
-  artifactUrl: string;
-  githubUrl: string;
-  metrics: Array<{ label: string; value: string; detail: string }>;
-  verification: Array<{ label: string; value: string }>;
+type Metric = {
+  label: string;
+  value: string;
+  detail: string;
 };
 
-const projectSummary: ProjectSummary = {
+type Verification = {
+  value: string;
+  label: string;
+  detail: string;
+};
+
+const projectSummary = {
   artifactUrl:
     'https://github.com/ankan00V/ScalePII/raw/main/output/Red%20Herring%20Prospectus%20-%20REDACTED.docx',
   githubUrl: 'https://github.com/ankan00V/ScalePII',
   metrics: [
-    { label: 'Held-out F1', value: '0.9855', detail: 'Span-level, secondary annotations' },
+    { label: 'Held-out F1', value: '0.9855', detail: 'Secondary annotation set' },
     { label: 'Coverage F1', value: '1.0000', detail: 'Coverage-focused sample' },
-    { label: 'Unit tests', value: '40', detail: 'Synthetic and DOCX edge cases' },
-  ],
+    { label: 'Regression tests', value: '40', detail: 'Synthetic + DOCX edge cases' },
+  ] satisfies Metric[],
   verification: [
-    { label: 'Visible occurrences checked', value: '610' },
-    { label: 'Hidden field occurrences checked', value: '77' },
-    { label: 'Embedded images neutralized', value: '8' },
-  ],
+    {
+      value: '610',
+      label: 'visible replacements inspected',
+      detail: 'Text-layer values detected by the current pipeline.',
+    },
+    {
+      value: '77',
+      label: 'hidden field values cleared',
+      detail: 'Includes Word hyperlink instructions, not just visible text.',
+    },
+    {
+      value: '8',
+      label: 'image assets neutralised',
+      detail: 'Fail-closed replacement for embedded raster media.',
+    },
+  ] satisfies Verification[],
 };
+
+const releaseFacts = [
+  ['SOURCE', 'Red Herring Prospectus'],
+  ['OUTPUT', 'Pseudonymised .docx'],
+  ['MODE', 'Local processing'],
+];
 
 function App() {
   const [showBoundary, setShowBoundary] = useState(false);
 
   return (
-    <main>
-      <nav className="nav" aria-label="Primary navigation">
-        <a className="wordmark" href="#top" aria-label="ScalePII home">
-          <span className="wordmark-mark"><ShieldCheck size={19} strokeWidth={2.4} /></span>
-          <span>ScalePII</span>
-        </a>
-        <a className="nav-link" href={projectSummary.githubUrl} target="_blank" rel="noreferrer">
-          <Github size={16} /> Source <ArrowUpRight size={14} />
-        </a>
-      </nav>
+    <main className="site-shell">
+      <div className="paper-grid" aria-hidden="true" />
 
-      <section className="hero shell" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow"><span /> PII redaction assignment</p>
-          <h1>Redaction evidence,<br /><em>ready to review.</em></h1>
-          <p className="lede">
-            A reproducible DOCX redaction pipeline with privacy-safe audit trails,
-            structural verification, and transparent evaluation evidence.
+      <header className="masthead page-width">
+        <a className="brand" href="#top" aria-label="ScalePII home">
+          <span className="brand-mark">SP</span>
+          <span className="brand-type">
+            <strong>ScalePII</strong>
+            <small>REVIEW CONSOLE / 01</small>
+          </span>
+        </a>
+
+        <div className="masthead-meta">
+          <span className="status-mark"><i /> DELIVERY VERIFIED</span>
+          <a href={projectSummary.githubUrl} target="_blank" rel="noreferrer">
+            Repository <ArrowUpRight size={15} />
+          </a>
+        </div>
+      </header>
+
+      <section className="hero page-width" id="top">
+        <div className="hero-copy reveal">
+          <p className="kicker"><span>01</span> Privacy redaction / assignment delivery</p>
+          <h1>A redaction run<br />you can <em>interrogate.</em></h1>
+          <p className="hero-intro">
+            A reproducible DOCX pipeline that replaces sensitive values with stable fake alternatives, preserves document structure, and proves what it checked.
           </p>
-          <div className="actions">
-            <a className="button button-primary" href={projectSummary.artifactUrl}>
-              <FileCheck2 size={18} /> Download redacted DOCX <ArrowUpRight size={16} />
+
+          <div className="hero-actions">
+            <a className="action action-primary" href={projectSummary.artifactUrl}>
+              <ArrowDownToLine size={18} />
+              <span>Download redacted DOCX</span>
             </a>
-            <a className="button button-secondary" href={projectSummary.githubUrl} target="_blank" rel="noreferrer">
-              <Github size={18} /> Review source
+            <a className="action action-secondary" href={projectSummary.githubUrl} target="_blank" rel="noreferrer">
+              <Github size={18} />
+              <span>Review implementation</span>
             </a>
           </div>
-          <p className="microcopy">The download contains a redacted document only—never the supplied source prospectus.</p>
+
+          <dl className="run-facts" aria-label="Release facts">
+            {releaseFacts.map(([label, value]) => (
+              <div key={label}>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
-        <aside className="verification-card" aria-label="Serialized document verification">
-          <div className="card-topline"><span>FINAL RUN</span><span className="verified"><CheckCircle2 size={15} /> VERIFIED</span></div>
-          <div className="check-illustration"><FileCheck2 size={44} strokeWidth={1.55} /></div>
-          <h2>Serialized package check passed</h2>
-          <p>The final DOCX is inspected at package level, including hidden field instructions and embedded media.</p>
-          <dl>
-            <div><dt>Structure</dt><dd>preserved</dd></div>
-            <div><dt>Audit values</dt><dd>hash-only</dd></div>
-            <div><dt>Media</dt><dd>neutralized</dd></div>
-          </dl>
-        </aside>
+        <article className="dossier reveal reveal-late" aria-label="Final delivery dossier">
+          <div className="dossier-topline">
+            <span>DELIVERY DOSSIER</span>
+            <span>RHP / 01</span>
+          </div>
+          <div className="dossier-title">
+            <span className="dossier-number">01</span>
+            <div>
+              <p>FINAL OUTPUT</p>
+              <h2>Serialized package<br />verification</h2>
+            </div>
+          </div>
+          <div className="redaction-sample" aria-hidden="true">
+            <span className="line line-one" />
+            <span className="line line-two" />
+            <span className="line line-three" />
+            <span className="line line-four" />
+            <span className="line line-five" />
+            <span className="redaction-bar" />
+          </div>
+          <div className="dossier-result">
+            <span className="result-icon"><Check size={17} strokeWidth={3} /></span>
+            <div>
+              <strong>Package check passed</strong>
+              <p>Structure, hidden fields and embedded media inspected.</p>
+            </div>
+          </div>
+          <div className="dossier-footnote">
+            <Fingerprint size={15} /> Audit records contain source hashes, never source text.
+          </div>
+        </article>
       </section>
 
-      <section className="shell metrics-section" aria-labelledby="metrics-heading">
-        <div className="section-heading">
-          <p className="eyebrow"><span /> EVALUATION</p>
-          <h2 id="metrics-heading">Measured, not hand-waved.</h2>
-          <p>Scores are reported against saved annotations and clearly bounded in the evaluation report; they are not presented as a generalisation guarantee.</p>
+      <section className="release-band" aria-label="Release status">
+        <div className="page-width release-band-content">
+          <span className="release-band-label"><ShieldCheck size={18} /> RELEASE POSTURE</span>
+          <p>Source material remains local. The public artefacts contain the processed document and privacy-safe audit evidence only.</p>
+          <a href="#evidence">Inspect evidence <ArrowUpRight size={15} /></a>
         </div>
-        <div className="metrics-grid">
-          {projectSummary.metrics.map((metric) => (
-            <article className="metric" key={metric.label}>
+      </section>
+
+      <section className="page-width metrics-section" aria-labelledby="metrics-heading">
+        <div className="section-label reveal">
+          <span>02</span>
+          <p>Evaluation snapshot</p>
+        </div>
+        <div className="section-heading reveal">
+          <h2 id="metrics-heading">Numbers with<br />their caveats intact.</h2>
+          <p>
+            Scores are tied to saved annotations and documented methodology. They are evidence from this run—not a claim of universal coverage.
+          </p>
+        </div>
+        <div className="metric-grid">
+          {projectSummary.metrics.map((metric, index) => (
+            <article className="metric-card reveal" style={{ '--delay': `${index * 80}ms` } as React.CSSProperties} key={metric.label}>
+              <span className="metric-index">0{index + 1}</span>
               <p>{metric.label}</p>
               <strong>{metric.value}</strong>
-              <span>{metric.detail}</span>
+              <small>{metric.detail}</small>
+            </article>
+          ))}
+        </div>
+        <a className="text-link" href={`${projectSummary.githubUrl}/blob/main/EVALUATION.md`} target="_blank" rel="noreferrer">
+          Read evaluation strategy <ArrowUpRight size={16} />
+        </a>
+      </section>
+
+      <section className="page-width evidence-section" id="evidence" aria-labelledby="evidence-heading">
+        <div className="evidence-heading reveal">
+          <div className="section-label">
+            <span>03</span>
+            <p>Delivery evidence</p>
+          </div>
+          <h2 id="evidence-heading">The verifier works beneath the surface.</h2>
+          <p>
+            Visual inspection is not enough for a Word package. The delivery verifier opens the final DOCX and checks the serialised content, not only what Word displays.
+          </p>
+        </div>
+
+        <div className="evidence-ledger">
+          {projectSummary.verification.map((item, index) => (
+            <article className="ledger-row reveal" style={{ '--delay': `${index * 90}ms` } as React.CSSProperties} key={item.label}>
+              <span className="ledger-index">0{index + 1}</span>
+              <strong>{item.value}</strong>
+              <div>
+                <h3>{item.label}</h3>
+                <p>{item.detail}</p>
+              </div>
+              <ScanLine className="ledger-icon" size={20} />
             </article>
           ))}
         </div>
       </section>
 
-      <section className="shell evidence-section" aria-labelledby="evidence-heading">
-        <div className="evidence-intro">
-          <p className="eyebrow"><span /> DELIVERY EVIDENCE</p>
-          <h2 id="evidence-heading">What the verifier actually checks.</h2>
-          <p>Every claim below is generated by the included delivery verifier, not copied from a manual spot-check.</p>
-        </div>
-        <div className="verification-grid">
-          {projectSummary.verification.map((item) => (
-            <div className="verification-item" key={item.label}>
-              <strong>{item.value}</strong>
-              <span>{item.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="shell privacy-panel" aria-labelledby="privacy-heading">
-        <div className="privacy-icon"><LockKeyhole size={26} /></div>
-        <div>
-          <p className="eyebrow"><span /> SOURCE-DOCUMENT BOUNDARY</p>
-          <h2 id="privacy-heading">This hosted console does not accept source documents.</h2>
+      <section className="page-width boundary-section reveal" aria-labelledby="boundary-heading">
+        <div className="boundary-flag"><LockKeyhole size={21} /><span>PROCESSING BOUNDARY</span></div>
+        <div className="boundary-copy">
+          <h2 id="boundary-heading">No source documents<br />leave the review path.</h2>
           <p>
-            The supplied prospectus and gold annotations are deliberately excluded from Git and this host. The exact tested pipeline runs locally, which avoids creating an unreviewed persistence path for sensitive material.
+            This site deliberately has no upload form, database or account system. The provided prospectus and gold annotations remain local; the exact tested pipeline runs where the sensitive material belongs.
           </p>
-          <button className="text-button" type="button" onClick={() => setShowBoundary((visible) => !visible)} aria-expanded={showBoundary}>
-            {showBoundary ? 'Hide' : 'Show'} local workflow <ArrowUpRight size={15} />
+        </div>
+        <div className="boundary-action">
+          <button type="button" onClick={() => setShowBoundary((visible) => !visible)} aria-expanded={showBoundary}>
+            <span>{showBoundary ? 'Hide' : 'Show'} local workflow</span>
+            <ChevronDown size={18} />
           </button>
           {showBoundary && (
-            <pre className="command"><TerminalSquare size={16} /> python redact.py --input input.docx --output output/redacted.docx</pre>
+            <pre><TerminalSquare size={16} /> python redact.py --input input.docx --output output/redacted.docx</pre>
           )}
         </div>
       </section>
 
-      <footer className="shell footer">
-        <span>ScalePII · DOCX PII Redaction Tool</span>
-        <a href={projectSummary.githubUrl} target="_blank" rel="noreferrer">Open repository <ArrowUpRight size={14} /></a>
+      <footer className="footer page-width">
+        <div>
+          <strong>ScalePII</strong>
+          <span>DOCX PII Redaction Tool</span>
+        </div>
+        <p>Evidence console · built for reviewer scrutiny</p>
+        <a href={projectSummary.githubUrl} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={15} /></a>
       </footer>
     </main>
   );
