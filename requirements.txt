@@ -1,0 +1,12 @@
+# Core dependencies
+python-docx>=1.1.0      # .docx parsing and writing, run-level access
+Faker>=25.0.0           # realistic fake replacement values (en_IN locale)
+spacy>=3.7.0            # NER for the open-class types (PERSON / ORG)
+
+# The spaCy model is a separate download:
+#     python -m spacy download en_core_web_sm
+#
+# The tool degrades gracefully without it — regex, contextual and structural
+# detectors still run — but person/organisation recall drops sharply, since
+# the gazetteers are seeded from the model's output. Run with --no-ner to
+# make that fallback explicit.
