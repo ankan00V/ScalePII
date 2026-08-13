@@ -1,0 +1,340 @@
+{
+  "blocks_evaluated": 130,
+  "gold_entities": 34,
+  "strict_span": {
+    "PERSON": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 8
+    },
+    "ORG": {
+      "tp": 9,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.8182,
+      "recall": 0.9,
+      "f1": 0.8571,
+      "support": 10
+    },
+    "EMAIL": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    },
+    "PHONE": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 6
+    },
+    "ADDRESS": {
+      "tp": 4,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "support": 5
+    },
+    "DIN": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    },
+    "WEBSITE": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 1
+    },
+    "MICRO_AVG": {
+      "tp": 32,
+      "fp": 3,
+      "fn": 2,
+      "precision": 0.9143,
+      "recall": 0.9412,
+      "f1": 0.9275,
+      "support": 34
+    },
+    "MACRO_AVG": {
+      "precision": 0.9455,
+      "recall": 0.9571,
+      "f1": 0.951
+    }
+  },
+  "relaxed_span": {
+    "PERSON": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 8
+    },
+    "ORG": {
+      "tp": 10,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.9091,
+      "recall": 1.0,
+      "f1": 0.9524,
+      "support": 10
+    },
+    "EMAIL": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    },
+    "PHONE": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 6
+    },
+    "ADDRESS": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 5
+    },
+    "DIN": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    },
+    "WEBSITE": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 1
+    },
+    "MICRO_AVG": {
+      "tp": 34,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.9714,
+      "recall": 1.0,
+      "f1": 0.9855,
+      "support": 34
+    },
+    "MACRO_AVG": {
+      "precision": 0.987,
+      "recall": 1.0,
+      "f1": 0.9932
+    }
+  },
+  "character_level": {
+    "tp_chars": 934,
+    "fp_chars": 0,
+    "fn_chars": 49,
+    "tn_chars": 7721,
+    "accuracy": 0.99437,
+    "precision": 1.0,
+    "recall": 0.9502,
+    "f1": 0.9744
+  },
+  "by_stratum_relaxed": {
+    "front_matter": {
+      "PERSON": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "ORG": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "ADDRESS": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "WEBSITE": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "MICRO_AVG": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 9
+      },
+      "MACRO_AVG": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "body": {
+      "PERSON": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "ORG": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 8
+      },
+      "MICRO_AVG": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 9
+      },
+      "MACRO_AVG": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "governance": {
+      "PERSON": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "ORG": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "EMAIL": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "PHONE": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "ADDRESS": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "DIN": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "MICRO_AVG": {
+        "tp": 16,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.9412,
+        "recall": 1.0,
+        "f1": 0.9697,
+        "support": 16
+      },
+      "MACRO_AVG": {
+        "precision": 0.8333,
+        "recall": 0.8333,
+        "f1": 0.8333
+      }
+    }
+  },
+  "false_positives": [
+    {
+      "block": "body#3879",
+      "type": "ORG",
+      "source_sha256": "aaaf690785020262f121f2696b47d15b59acbb6c5463cf62e04071409dfe1932",
+      "length": 12
+    }
+  ],
+  "false_negatives": [],
+  "split": "secondary-current"
+}

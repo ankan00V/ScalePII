@@ -1,0 +1,23 @@
+{
+  "blocks_scanned": 4181,
+  "blocks_touched": 370,
+  "replacements": 610,
+  "by_type": {
+    "ADDRESS": 70,
+    "DIN": 8,
+    "EMAIL": 52,
+    "ORG": 218,
+    "PERSON": 200,
+    "PHONE": 36,
+    "WEBSITE": 26
+  },
+  "gazetteers": {
+    "persons": 61,
+    "orgs": 111,
+    "dins": 8
+  },
+  "field_code_values_redacted": 77,
+  "image_assets_redacted": 8,
+  "elapsed_seconds": 7.83,
+  "stable_mappings": 258
+}
