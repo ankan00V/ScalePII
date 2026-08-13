@@ -12,16 +12,17 @@ alternatives rather than a generic `[REDACTED]` token.
 | Redacted Word document | `output/Red Herring Prospectus - REDACTED.docx` |
 | README | This file |
 | Evaluation report | `EVALUATION.md`, `output/PII_Redaction_Evaluation_Report.docx` and current `reports/evaluation*.json` files |
-| Hosted reviewer console | [ScalePII Reviewer Console](https://scalepii-reviewer-console-zt4xy9.v2.appdeploy.ai/) |
+| Hosted reviewer console | `web/` — static Vite site, ready for Vercel |
 
 ## Hosted reviewer console
 
-I also deployed a small, read-only [reviewer console](https://scalepii-reviewer-console-zt4xy9.v2.appdeploy.ai/). It provides a direct link to the redacted DOCX, source repository, evaluation summary and delivery-verification evidence.
+I built `web/` as a small, read-only reviewer console. It provides a direct link to the redacted DOCX, source repository, evaluation summary and delivery-verification evidence. It is a portable static Vite site that is ready to deploy on Vercel; see [`web/README.md`](web/README.md) for the exact import settings.
 
 It intentionally **does not accept source-document uploads**. The exact tested
 pipeline runs locally, so the supplied prospectus is never transmitted to or
-retained by an additional cloud service. The console source lives in `web/`;
-its one read-only endpoint serves the current summary displayed in the UI.
+retained by an additional cloud service. The console contains only the
+mechanically verified, committed delivery summary and needs neither a backend
+nor a database.
 
 `output/PII_Redaction_Evaluation_Report.docx` is an upload-ready rendering of
 the same report. I generate it with `python build_evaluation_report.py`, so it

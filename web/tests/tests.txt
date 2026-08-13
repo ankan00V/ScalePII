@@ -1,16 +1,16 @@
 # Tests
 
-## Test 1 - Load live delivery evidence [sanity]
+## Test 1 - Load verified delivery evidence [sanity]
 Viewport: desktop (1280x800)
-Covers: GET /api/project, rendered evaluation metrics, rendered delivery-verification evidence
-Description: Verifies the reviewer console loads its live project summary and renders the measured evidence.
+Covers: static reviewer console, rendered evaluation metrics, rendered delivery-verification evidence
+Description: Verifies the reviewer console renders the committed, mechanically verified evidence without requiring a backend or database.
 
 Steps:
 1. Open the reviewer console
 2. Confirm the "Held-out F1" card is visible with value "0.9855"
 3. Confirm the delivery-verification section includes "610" and "77"
 
-Expected: The live project evidence is visible and the fallback-unavailable notice is absent.
+Expected: The committed delivery evidence is visible, including all three metric cards and all three verification counts.
 
 ## Test 2 - Navigate to redacted deliverable and source
 Viewport: desktop (1280x800)

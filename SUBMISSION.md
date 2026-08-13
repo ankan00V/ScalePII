@@ -15,10 +15,9 @@ I built `PII_Redaction_Submission.zip` with the following items:
 5. `reports/evaluation.json`, `reports/evaluation_heldout.json`,
    `reports/evaluation_coverage.json`, `reports/run_summary.json` and the
    privacy-safe files in `output/` — reproducible run evidence.
-6. `web/` — the source for the hosted, read-only reviewer console at
-   https://scalepii-reviewer-console-zt4xy9.v2.appdeploy.ai/. It exposes the
-   final artefact, GitHub source and evidence without accepting or retaining
-   source documents.
+6. `web/` — the source for the Vercel-ready, read-only reviewer console. It
+   exposes the final artefact, GitHub source and evidence without accepting,
+   transmitting or retaining source documents; it requires no database.
 
 The supplied `input.docx` is raw sensitive material that the assignment
 recipient already owns. I deliberately do not duplicate it in the archive.
