@@ -11,7 +11,7 @@ alternatives rather than a generic `[REDACTED]` token.
 | Source code | `redact.py`, `piiredact/`, `verify_delivery.py` |
 | Redacted Word document | `output/Red Herring Prospectus - REDACTED.docx` |
 | README | This file |
-| Evaluation report | `EVALUATION.md` and current `reports/evaluation*.json` files |
+| Evaluation report | `EVALUATION.md`, `output/PII_Redaction_Evaluation_Report.docx` and current `reports/evaluation*.json` files |
 | Hosted reviewer console | [ScalePII Reviewer Console](https://scalepii-reviewer-console-zt4xy9.v2.appdeploy.ai/) |
 
 ## Hosted reviewer console
@@ -22,6 +22,10 @@ It intentionally **does not accept source-document uploads**. The exact tested
 pipeline runs locally, so the supplied prospectus is never transmitted to or
 retained by an additional cloud service. The console source lives in `web/`;
 its one read-only endpoint serves the current summary displayed in the UI.
+
+`output/PII_Redaction_Evaluation_Report.docx` is an upload-ready rendering of
+the same report. I generate it with `python build_evaluation_report.py`, so it
+remains aligned with `EVALUATION.md` and contains no source values.
 
 ## Run
 

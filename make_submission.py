@@ -32,6 +32,7 @@ FILES = (
     "assets",
     "tests",
     "output/Red Herring Prospectus - REDACTED.docx",
+    "output/PII_Redaction_Evaluation_Report.docx",
     "output/mapping.csv",
     "output/detections.jsonl",
     "output/field_code_redactions.json",

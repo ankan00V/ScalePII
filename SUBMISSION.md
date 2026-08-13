@@ -10,6 +10,8 @@ I built `PII_Redaction_Submission.zip` with the following items:
    Word deliverable.
 4. `README.md`, `EVALUATION.md` and `REVIEWER_GUIDE.md` — the approach,
    trade-offs, metrics, evidence and a fast review path.
+   `output/PII_Redaction_Evaluation_Report.docx` is the matching upload-ready
+   document version of the evaluation report.
 5. `reports/evaluation.json`, `reports/evaluation_heldout.json`,
    `reports/evaluation_coverage.json`, `reports/run_summary.json` and the
    privacy-safe files in `output/` — reproducible run evidence.
