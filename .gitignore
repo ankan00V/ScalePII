@@ -1,0 +1,13 @@
+# Assignment source material and evaluation annotations contain raw PII.
+input.docx
+gold/
+CONTEXT.md
+
+# Generated distribution archive and local-only test/runtime artefacts.
+PII_Redaction_Submission.zip
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Historical reports are not cited by the final submission.
+reports/*_blind.json
