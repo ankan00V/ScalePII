@@ -1,0 +1,37 @@
+# Tests
+
+## Test 1 - Load live delivery evidence [sanity]
+Viewport: desktop (1280x800)
+Covers: GET /api/project, rendered evaluation metrics, rendered delivery-verification evidence
+Description: Verifies the reviewer console loads its live project summary and renders the measured evidence.
+
+Steps:
+1. Open the reviewer console
+2. Confirm the "Held-out F1" card is visible with value "0.9855"
+3. Confirm the delivery-verification section includes "610" and "77"
+
+Expected: The live project evidence is visible and the fallback-unavailable notice is absent.
+
+## Test 2 - Navigate to redacted deliverable and source
+Viewport: desktop (1280x800)
+Covers: redacted DOCX download action, GitHub source-review action
+Description: Verifies a reviewer can access both the processed artifact and its implementation from the primary actions.
+
+Steps:
+1. Confirm the primary action is labeled "Download redacted DOCX"
+2. Confirm the secondary action is labeled "Review source"
+3. Confirm the header Source link points to the public GitHub repository
+
+Expected: All reviewer artefact and source navigation actions are visible and link to the public project resources.
+
+## Test 3 - Reveal the no-upload privacy guardrail on mobile
+Viewport: mobile (375x667)
+Covers: responsive source-document boundary, no-upload privacy guardrail, local CLI workflow disclosure
+Description: Verifies the hosted console makes the security boundary clear instead of accepting a sensitive source document.
+
+Steps:
+1. Scroll to the "This hosted console does not accept source documents" section
+2. Tap "Show local workflow"
+3. Confirm the redact.py command is visible
+
+Expected: The local workflow expands in the mobile layout and clearly states that source files are not accepted by the hosted console.

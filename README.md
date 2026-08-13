@@ -12,6 +12,16 @@ alternatives rather than a generic `[REDACTED]` token.
 | Redacted Word document | `output/Red Herring Prospectus - REDACTED.docx` |
 | README | This file |
 | Evaluation report | `EVALUATION.md` and current `reports/evaluation*.json` files |
+| Hosted reviewer console | [ScalePII Reviewer Console](https://scalepii-reviewer-console-zt4xy9.v2.appdeploy.ai/) |
+
+## Hosted reviewer console
+
+I also deployed a small, read-only [reviewer console](https://scalepii-reviewer-console-zt4xy9.v2.appdeploy.ai/). It provides a direct link to the redacted DOCX, source repository, evaluation summary and delivery-verification evidence.
+
+It intentionally **does not accept source-document uploads**. The exact tested
+pipeline runs locally, so the supplied prospectus is never transmitted to or
+retained by an additional cloud service. The console source lives in `web/`;
+its one read-only endpoint serves the current summary displayed in the UI.
 
 ## Run
 

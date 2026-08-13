@@ -8,6 +8,9 @@ PII_Redaction_Submission.zip
 __pycache__/
 *.py[cod]
 .DS_Store
+node_modules/
+web/dist/
+.appdeploy
 
 # Historical reports are not cited by the final submission.
 reports/*_blind.json
