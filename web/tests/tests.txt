@@ -1,38 +1,35 @@
-# Tests
+# Reviewer-console checks
 
-## Test 1 - Inspect the interactive synthetic redaction walkthrough [sanity]
+## Test 1 - Inspect the fictional transformation walkthrough [sanity]
 Viewport: desktop (1280x800)
-Covers: source-view rendering, redacted-output rendering, privacy-safe audit-trace rendering
-Description: Verifies a reviewer can inspect each stage of an explicitly synthetic transformation without exposing the submitted prospectus.
+Covers: source highlighting, stable fake values, hash-only audit trace
 
 Steps:
-1. Open the reviewer console
-2. In the "Inspect a transformation" panel, confirm Source view is selected and detected values are highlighted
-3. Select "Redacted output" and confirm a stable fake replacement is visible
-4. Select "Audit trace" and confirm source hashes, detector names and replacements are displayed
+1. Open the "Trace one transformation" section
+2. Select Source values and confirm highlighted fictional PII is visible
+3. Select Fake values and confirm stable replacements are visible
+4. Select Audit trace and confirm detector names, hashes and replacements are displayed
 
-Expected: Every interactive view renders, and the walkthrough is visibly marked as a static synthetic demo rather than the submitted prospectus.
+Expected: The walkthrough works end-to-end and states that it never contains the submitted prospectus.
 
-## Test 2 - Navigate to redacted deliverable and source
+## Test 2 - Open each delivery artefact
 Viewport: desktop (1280x800)
-Covers: redacted DOCX download action, GitHub source-review action
-Description: Verifies a reviewer can access both the processed artifact and its implementation from the primary actions.
+Covers: final DOCX, evaluation report, source repository
 
 Steps:
-1. Confirm the primary action is labeled "Download final DOCX"
-2. Confirm the document-run card links to the processed DOCX
-3. Confirm the repository navigation points to the public GitHub repository
+1. Select "Get redacted DOCX"
+2. Select "Evaluation DOCX" in the delivery card
+3. Select "View source" in the navigation
 
-Expected: All reviewer artefact and source navigation actions are visible and link to the public project resources.
+Expected: Every primary assignment artefact resolves to its public project resource.
 
-## Test 3 - Reveal the no-upload privacy guardrail on mobile
+## Test 3 - Confirm required coverage and mobile privacy guardrail
 Viewport: mobile (375x667)
-Covers: responsive source-document boundary, no-upload privacy guardrail, local CLI workflow disclosure
-Description: Verifies the hosted console makes the security boundary clear instead of accepting a sensitive source document.
+Covers: all nine assignment-required PII categories, local-only processing boundary
 
 Steps:
-1. Scroll to the "Privacy boundary by design" section
-2. Tap "Show local command"
-3. Confirm the redact.py command is visible
+1. Confirm every listed category is visible in "All nine required PII categories"
+2. Scroll to the security-boundary section
+3. Tap "Show local command"
 
-Expected: The local workflow expands in the mobile layout and clearly states that source files are not accepted by the hosted console.
+Expected: The mobile console clearly separates documented detector coverage from source-document processing and reveals the local CLI workflow.
