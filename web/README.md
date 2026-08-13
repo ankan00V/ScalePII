@@ -4,6 +4,10 @@ This is a static Vite reviewer console for the ScalePII assignment. It links to
 the redacted DOCX and public repository, and renders the committed evaluation
 and delivery-verification evidence.
 
+The interactive redaction walkthrough uses synthetic fixture data only. It lets
+a reviewer inspect source highlighting, stable replacements and hash-only audit
+records without exposing or transmitting the supplied prospectus.
+
 It deliberately has no file-upload form, backend, database, authentication or
 environment variables. The sensitive source prospectus continues to be
 processed locally by the Python tool in the repository root.

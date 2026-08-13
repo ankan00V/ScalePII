@@ -1,16 +1,17 @@
 # Tests
 
-## Test 1 - Load verified delivery evidence [sanity]
+## Test 1 - Inspect the interactive synthetic redaction walkthrough [sanity]
 Viewport: desktop (1280x800)
-Covers: static reviewer console, rendered evaluation metrics, rendered delivery-verification evidence
-Description: Verifies the reviewer console renders the committed, mechanically verified evidence without requiring a backend or database.
+Covers: source-view rendering, redacted-output rendering, privacy-safe audit-trace rendering
+Description: Verifies a reviewer can inspect each stage of an explicitly synthetic transformation without exposing the submitted prospectus.
 
 Steps:
 1. Open the reviewer console
-2. Confirm the "Held-out F1" card is visible with value "0.9855"
-3. Confirm the delivery-verification section includes "610" and "77"
+2. In the "Inspect a transformation" panel, confirm Source view is selected and detected values are highlighted
+3. Select "Redacted output" and confirm a stable fake replacement is visible
+4. Select "Audit trace" and confirm source hashes, detector names and replacements are displayed
 
-Expected: The committed delivery evidence is visible, including all three metric cards and all three verification counts.
+Expected: Every interactive view renders, and the walkthrough is visibly marked as a static synthetic demo rather than the submitted prospectus.
 
 ## Test 2 - Navigate to redacted deliverable and source
 Viewport: desktop (1280x800)
@@ -18,9 +19,9 @@ Covers: redacted DOCX download action, GitHub source-review action
 Description: Verifies a reviewer can access both the processed artifact and its implementation from the primary actions.
 
 Steps:
-1. Confirm the primary action is labeled "Download redacted DOCX"
-2. Confirm the secondary action is labeled "Review source"
-3. Confirm the header Source link points to the public GitHub repository
+1. Confirm the primary action is labeled "Download final DOCX"
+2. Confirm the document-run card links to the processed DOCX
+3. Confirm the repository navigation points to the public GitHub repository
 
 Expected: All reviewer artefact and source navigation actions are visible and link to the public project resources.
 
@@ -30,8 +31,8 @@ Covers: responsive source-document boundary, no-upload privacy guardrail, local 
 Description: Verifies the hosted console makes the security boundary clear instead of accepting a sensitive source document.
 
 Steps:
-1. Scroll to the "This hosted console does not accept source documents" section
-2. Tap "Show local workflow"
+1. Scroll to the "Privacy boundary by design" section
+2. Tap "Show local command"
 3. Confirm the redact.py command is visible
 
 Expected: The local workflow expands in the mobile layout and clearly states that source files are not accepted by the hosted console.
