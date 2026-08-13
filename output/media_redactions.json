@@ -1,0 +1,42 @@
+[
+  {
+    "part": "/word/media/image1.jpeg",
+    "content_type": "image/jpeg",
+    "action": "replaced_with_neutral_placeholder"
+  },
+  {
+    "part": "/word/media/image1.png",
+    "content_type": "image/png",
+    "action": "replaced_with_neutral_placeholder"
+  },
+  {
+    "part": "/word/media/image2.jpeg",
+    "content_type": "image/jpeg",
+    "action": "replaced_with_neutral_placeholder"
+  },
+  {
+    "part": "/word/media/image3.jpeg",
+    "content_type": "image/jpeg",
+    "action": "replaced_with_neutral_placeholder"
+  },
+  {
+    "part": "/word/media/image2.png",
+    "content_type": "image/png",
+    "action": "replaced_with_neutral_placeholder"
+  },
+  {
+    "part": "/word/media/image3.png",
+    "content_type": "image/png",
+    "action": "replaced_with_neutral_placeholder"
+  },
+  {
+    "part": "/word/media/image4.png",
+    "content_type": "image/png",
+    "action": "replaced_with_neutral_placeholder"
+  },
+  {
+    "part": "/word/media/image5.png",
+    "content_type": "image/png",
+    "action": "replaced_with_neutral_placeholder"
+  }
+]

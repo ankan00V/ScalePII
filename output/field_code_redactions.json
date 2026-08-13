@@ -1,0 +1,541 @@
+[
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "59d115acd6b869e83d47ffac9ac7e89e50d53d37bc1c5bc9cf083316ae81203a",
+    "replacement": "meghana.bhavsar@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "54808e67ea03f3a4afc7d61dadf41fbd5d0cc1acb73a18c1467762486aa5cb34",
+    "replacement": "qarin.suresh@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "16ada0cfb0d996b2cdf5cd0ba6ce4610cd0b14f3e6ff38a2ab4a360c1c17d83e",
+    "replacement": "rushil43@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "8e5c7836916f3cd3c008e3a99eed86fc41b50d871e339de18b20e404cb2316cf",
+    "replacement": "lalawahab@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "59d115acd6b869e83d47ffac9ac7e89e50d53d37bc1c5bc9cf083316ae81203a",
+    "replacement": "meghana.bhavsar@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "9e3259a42d1d84bf403ae30c447bbbdc5823175f62d05415223dab3903e859a8",
+    "replacement": "http://www.kalla.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "54808e67ea03f3a4afc7d61dadf41fbd5d0cc1acb73a18c1467762486aa5cb34",
+    "replacement": "qarin.suresh@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "948c842d31b23c32fc3f42671a3616e219424e1f98819edcbe996af1250d21d4",
+    "replacement": "http://www.balay.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "a1b18de93f943150b6968aa27ac9e92488e12d2b7afbab5194fdf8c5ceb10dad",
+    "replacement": "yug.singhal@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "16ada0cfb0d996b2cdf5cd0ba6ce4610cd0b14f3e6ff38a2ab4a360c1c17d83e",
+    "replacement": "rushil43@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "8b6a474a81c3c8bbe828e93c0c65ff1d5827a0a876648346180634405bb7ccd2",
+    "replacement": "http://www.pandit.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "0b215450231a5a5931dfe1d0e202fa41ca6d4494a6f175d204870cbb8e793be1",
+    "replacement": "dubeyudant@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "7ce24de99d9ffdb52b23492ee0635ed2d19b3dbdb4f1f634a84e101d432f177b",
+    "replacement": "darpan.dalal@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "f5ef11ebfacf76666149e5ec5159328fc8e88aaf0177dab45f8b0db16dec914c",
+    "replacement": "http://www.dalal-chada.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "7ce24de99d9ffdb52b23492ee0635ed2d19b3dbdb4f1f634a84e101d432f177b",
+    "replacement": "darpan.dalal@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "f17ca4b712e5d0ce9ba7721dc6f8391ae25615e0ca66563a216b4dccc94ff49d",
+    "replacement": "https://www.date-doshi.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "f17ca4b712e5d0ce9ba7721dc6f8391ae25615e0ca66563a216b4dccc94ff49d",
+    "replacement": "https://www.date-doshi.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "f17ca4b712e5d0ce9ba7721dc6f8391ae25615e0ca66563a216b4dccc94ff49d",
+    "replacement": "https://www.date-doshi.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "f37ac4ee07506d5d33fdd02427372f58f9d0c42329e846937f77f8c33291e828",
+    "replacement": "harita.ramakrishnan@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "54808e67ea03f3a4afc7d61dadf41fbd5d0cc1acb73a18c1467762486aa5cb34",
+    "replacement": "qarin.suresh@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "948c842d31b23c32fc3f42671a3616e219424e1f98819edcbe996af1250d21d4",
+    "replacement": "http://www.balay.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "a1b18de93f943150b6968aa27ac9e92488e12d2b7afbab5194fdf8c5ceb10dad",
+    "replacement": "yug.singhal@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "16ada0cfb0d996b2cdf5cd0ba6ce4610cd0b14f3e6ff38a2ab4a360c1c17d83e",
+    "replacement": "rushil43@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "8b6a474a81c3c8bbe828e93c0c65ff1d5827a0a876648346180634405bb7ccd2",
+    "replacement": "http://www.pandit.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "0b215450231a5a5931dfe1d0e202fa41ca6d4494a6f175d204870cbb8e793be1",
+    "replacement": "dubeyudant@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "54808e67ea03f3a4afc7d61dadf41fbd5d0cc1acb73a18c1467762486aa5cb34",
+    "replacement": "qarin.suresh@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "d0fe88de18578b688ae1b157d0df80de163f1e73ffd4cca5f20f9d617f3995ae",
+    "replacement": "chaaya.nagi@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "c2b5f600b1c8817fe18ea61e055905f6e8e086fa1990371415ca7636ad605d2f",
+    "replacement": "divya.deo@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "609c81f02c632841a1b4412670e0e08b8fe42d7a59ac00d97f4d07392a628eac",
+    "replacement": "https://www.rattan.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "16ada0cfb0d996b2cdf5cd0ba6ce4610cd0b14f3e6ff38a2ab4a360c1c17d83e",
+    "replacement": "rushil43@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "8b6a474a81c3c8bbe828e93c0c65ff1d5827a0a876648346180634405bb7ccd2",
+    "replacement": "http://www.pandit.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "0b215450231a5a5931dfe1d0e202fa41ca6d4494a6f175d204870cbb8e793be1",
+    "replacement": "dubeyudant@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "16a1ec370dd82cb35e415d26e23a736c33ad0752a9687d86c1be64318958e8fa",
+    "replacement": "kdara@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "8e5c7836916f3cd3c008e3a99eed86fc41b50d871e339de18b20e404cb2316cf",
+    "replacement": "lalawahab@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "7ce24de99d9ffdb52b23492ee0635ed2d19b3dbdb4f1f634a84e101d432f177b",
+    "replacement": "darpan.dalal@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "f5ef11ebfacf76666149e5ec5159328fc8e88aaf0177dab45f8b0db16dec914c",
+    "replacement": "http://www.dalal-chada.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "d6ab25f1247104c67f8495bff34b0235f05379d5f7d1c678841693ed43ebf0e9",
+    "replacement": "bishakha.gill@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "ff94ade1270122c6e89127143478ac004cf1d8c02357a8b5f3602f3a9075c1f1",
+    "replacement": "amol.deep@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "996c6c5d54646d74e0ebf787ec668b1ee1cb141fb278613e084ea8c1e6b54dca",
+    "replacement": "xavier.jain@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "3783c27b295732301d79edeb74474d66cef1582afa956780d3716b0b38587ba5",
+    "replacement": "mitesh.maharaj@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "839975e7a605119024611844d4213d61c09014660e1abd6c761a7cef3bd07c47",
+    "replacement": "bhavani.patel@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "86e3626ee09dfe88b8e4ea3066fcfb71e21fa227e2cb0f2f2560a8f68f30dc75",
+    "replacement": "http://www.sarkar.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "5c45187a2a288a1eb40f7ccd0de5c4c1976aa121978647918d5f8992ce96ccac",
+    "replacement": "ysahota@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "89a21f1493846d6ebc1f3baa3c4d061160fa2c803f37064116bfcfd0348f605f",
+    "replacement": "http://www.gulati.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "d6ab25f1247104c67f8495bff34b0235f05379d5f7d1c678841693ed43ebf0e9",
+    "replacement": "bishakha.gill@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "ff94ade1270122c6e89127143478ac004cf1d8c02357a8b5f3602f3a9075c1f1",
+    "replacement": "amol.deep@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "996c6c5d54646d74e0ebf787ec668b1ee1cb141fb278613e084ea8c1e6b54dca",
+    "replacement": "xavier.jain@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "3783c27b295732301d79edeb74474d66cef1582afa956780d3716b0b38587ba5",
+    "replacement": "mitesh.maharaj@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "839975e7a605119024611844d4213d61c09014660e1abd6c761a7cef3bd07c47",
+    "replacement": "bhavani.patel@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "86e3626ee09dfe88b8e4ea3066fcfb71e21fa227e2cb0f2f2560a8f68f30dc75",
+    "replacement": "http://www.sarkar.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "5c45187a2a288a1eb40f7ccd0de5c4c1976aa121978647918d5f8992ce96ccac",
+    "replacement": "ysahota@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "89a21f1493846d6ebc1f3baa3c4d061160fa2c803f37064116bfcfd0348f605f",
+    "replacement": "http://www.gulati.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "d6ab25f1247104c67f8495bff34b0235f05379d5f7d1c678841693ed43ebf0e9",
+    "replacement": "bishakha.gill@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "ff94ade1270122c6e89127143478ac004cf1d8c02357a8b5f3602f3a9075c1f1",
+    "replacement": "amol.deep@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "996c6c5d54646d74e0ebf787ec668b1ee1cb141fb278613e084ea8c1e6b54dca",
+    "replacement": "xavier.jain@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "3783c27b295732301d79edeb74474d66cef1582afa956780d3716b0b38587ba5",
+    "replacement": "mitesh.maharaj@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "839975e7a605119024611844d4213d61c09014660e1abd6c761a7cef3bd07c47",
+    "replacement": "bhavani.patel@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "86e3626ee09dfe88b8e4ea3066fcfb71e21fa227e2cb0f2f2560a8f68f30dc75",
+    "replacement": "http://www.sarkar.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "3e721555ff05d398f95585964da6ac23a8955ede5eae67d320816044e7a124a3",
+    "replacement": "aayush.chokshi@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "3e721555ff05d398f95585964da6ac23a8955ede5eae67d320816044e7a124a3",
+    "replacement": "aayush.chokshi@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "4d046a9af9cdee9493d94d7d24f3f6da3e0318a536f8ba4f3fec874cd59385b6",
+    "replacement": "wardasant@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "6b6370ac0ca5209bb4ce61169582a5a79b8c3d674648449cd0d5888f0069e093",
+    "replacement": "http://www.kumar.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "f93dee56571086412452a9becdf2adb45cb4ee2132efb9e141b46304f86481ff",
+    "replacement": "samuel.chandran@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "66b1f37a01a215d8f229051e6ba8c8f352fa284e962081d79d59affa252a3ad0",
+    "replacement": "http://www.mitra-sehgal.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "7ff91f855c0ebff64b9f1c29af6430c617e7ed99e663d1d51bbcc2b3f41da712",
+    "replacement": "faris44@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "52f7c32de57db6dbf24e12b528221182d5c43ab9f041c5a61f4b0eb28675725e",
+    "replacement": "http://www.sodhi.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "1c18ffe42a108d2836df21c76a0b9d15f0e3461e902990cd70490550f5ddbf73",
+    "replacement": "abeer.bora@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "89a21f1493846d6ebc1f3baa3c4d061160fa2c803f37064116bfcfd0348f605f",
+    "replacement": "http://www.gulati.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "4b30759907346d022867f23f9d3e9e46f76b9537db83f9adfcddc5bd1734d239",
+    "replacement": "ethan.khurana@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "86e3626ee09dfe88b8e4ea3066fcfb71e21fa227e2cb0f2f2560a8f68f30dc75",
+    "replacement": "http://www.sarkar.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "a2742dc8452b3def5810dccce5a2f8a27ac82599967eafac9887e6ab4dfa5247",
+    "replacement": "david.dube@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "ba95aa8bfa9fefbf4e957a248fae4d23965e724e2bfc9a58ef1e3033eeb5773b",
+    "replacement": "http://www.bumb.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "93ffb31c263dbb527aa63be940223a80d682dae386a3a1d81b66f4eed8ab80b4",
+    "replacement": "arjun.subramaniam@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "fb94b6f3cd6aec44f6d453d62640d4e7339462b37a8c683e76674ba383fdab83",
+    "replacement": "http://www.kari-majumdar.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "3304889d28e86581b5458e2fbd882e205a98f5daed6c0e73ec733ed3a16bb776",
+    "replacement": "kkumar@example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "WEBSITE",
+    "source_sha256": "406983b2ee05efa50bcfe251626e80f9363ef464999e8bf7486a9b8c7583b681",
+    "replacement": "http://www.purohit-shenoy.example.com"
+  },
+  {
+    "part": "/word/document.xml",
+    "field": "instruction",
+    "entity_type": "EMAIL",
+    "source_sha256": "a19ddeecc709561310379dcfdf531902fd025d0100a5d75c244eeb04b0f66b31",
+    "replacement": "vasana.patel@example.com"
+  }
+]
