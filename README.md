@@ -110,6 +110,83 @@ The output directory contains privacy-safe audit files:
 | `field_code_redactions.json` | Hidden hyperlink-field replacement hashes and fakes |
 | `media_redactions.json` | Neutralised image package parts and media types |
 
+```mermaid
+flowchart TD
+
+subgraph group_cli["Local delivery"]
+  node_cli_redact["Redaction CLI<br/>Python CLI<br/>[redact.py]"]
+end
+
+subgraph group_redaction["Redaction pipeline"]
+  node_pipeline["Workflow orchestration<br/>Python pipeline<br/>[pipeline.py]"]
+  node_docx_io["DOCX structure I/O<br/>Word package layer<br/>[docx_io.py]"]
+  node_spans["Span reconciliation<br/>text ranges<br/>[spans.py]"]
+  node_detectors["Hybrid PII detection<br/>detectors<br/>[detectors.py]"]
+  node_allowlist["Public-entity policy<br/>allowlist<br/>[allowlist.py]"]
+  node_spacy{{"spaCy en_core_web_sm<br/>external model"}}
+  node_fakes["Stable fake generator<br/>pseudonymisation<br/>[fakes.py]"]
+  node_media["Fail-closed media handling<br/>media sanitiser<br/>[media.py]"]
+end
+
+subgraph group_evidence["Outputs and assurance"]
+  node_output["Committed delivery artifacts<br/>DOCX and audit output"]
+  node_verify["Delivery verification<br/>Python validator<br/>[verify_delivery.py]"]
+  node_evaluation["Evaluation tools<br/>Python reporting<br/>[evaluate.py]"]
+  node_report_builder["Evaluation report builder<br/>Python reporting"]
+  node_reports["Persisted metrics<br/>evaluation artifacts"]
+end
+
+subgraph group_reviewer["Static reviewer console"]
+  node_web_main["Reviewer app entry<br/>Vite React entry<br/>[main.tsx]"]
+  node_web_app["Reviewer interface<br/>React application<br/>[App.tsx]"]
+end
+
+node_cli_redact -->|"invokes"| node_pipeline
+node_pipeline -->|"reads and rewrites DOCX"| node_docx_io
+node_docx_io -->|"maps text to runs"| node_spans
+node_pipeline -->|"detects PII"| node_detectors
+node_detectors -->|"applies exclusions"| node_allowlist
+node_detectors -->|"uses NER"| node_spacy
+node_detectors -->|"emits ranges"| node_spans
+node_pipeline -->|"generates replacements"| node_fakes
+node_fakes -->|"replaces detected values"| node_spans
+node_pipeline -->|"applies image policy"| node_media
+node_pipeline -->|"writes DOCX and audits"| node_output
+node_docx_io -.->|"scans hidden hyperlink fields"| node_pipeline
+node_verify -->|"validates delivery"| node_output
+node_evaluation -->|"supplies evaluation data"| node_report_builder
+node_report_builder -->|"writes metrics and reports"| node_reports
+node_web_main -->|"mounts"| node_web_app
+node_web_app -.->|"shows committed evidence"| node_output
+node_web_app -.->|"shows evaluation evidence"| node_reports
+
+click node_cli_redact "https://github.com/ankan00v/scalepii/blob/main/redact.py"
+click node_pipeline "https://github.com/ankan00v/scalepii/blob/main/piiredact/pipeline.py"
+click node_docx_io "https://github.com/ankan00v/scalepii/blob/main/piiredact/docx_io.py"
+click node_spans "https://github.com/ankan00v/scalepii/blob/main/piiredact/spans.py"
+click node_detectors "https://github.com/ankan00v/scalepii/blob/main/piiredact/detectors.py"
+click node_allowlist "https://github.com/ankan00v/scalepii/blob/main/piiredact/allowlist.py"
+click node_fakes "https://github.com/ankan00v/scalepii/blob/main/piiredact/fakes.py"
+click node_media "https://github.com/ankan00v/scalepii/blob/main/piiredact/media.py"
+click node_verify "https://github.com/ankan00v/scalepii/blob/main/verify_delivery.py"
+click node_evaluation "https://github.com/ankan00v/scalepii/blob/main/evaluate.py"
+click node_report_builder "https://github.com/ankan00v/scalepii/blob/main/build_evaluation_report.py"
+click node_web_main "https://github.com/ankan00v/scalepii/blob/main/web/src/main.tsx"
+click node_web_app "https://github.com/ankan00v/scalepii/blob/main/web/src/App.tsx"
+
+classDef toneNeutral fill:#f8fafc,stroke:#334155,stroke-width:1.5px,color:#0f172a
+classDef toneBlue fill:#dbeafe,stroke:#2563eb,stroke-width:1.5px,color:#172554
+classDef toneAmber fill:#fef3c7,stroke:#d97706,stroke-width:1.5px,color:#78350f
+classDef toneMint fill:#dcfce7,stroke:#16a34a,stroke-width:1.5px,color:#14532d
+classDef toneRose fill:#ffe4e6,stroke:#e11d48,stroke-width:1.5px,color:#881337
+classDef toneIndigo fill:#e0e7ff,stroke:#4f46e5,stroke-width:1.5px,color:#312e81
+classDef toneTeal fill:#ccfbf1,stroke:#0f766e,stroke-width:1.5px,color:#134e4a
+class node_cli_redact toneBlue
+class node_pipeline,node_docx_io,node_spans,node_detectors,node_allowlist,node_spacy,node_fakes,node_media toneAmber
+class node_output,node_verify,node_evaluation,node_report_builder,node_reports toneMint
+class node_web_main,node_web_app toneRose
+```
+
 These files deliberately do not store cleartext source PII. The source
 prospectus and gold annotations remain local working inputs and are not needed
 to read the final redacted document.
